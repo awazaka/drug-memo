@@ -1,0 +1,1 @@
+<a href="{{ route('createDrug') }}" class="btn btn-primary">＋</a>
