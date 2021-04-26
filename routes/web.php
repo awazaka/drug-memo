@@ -21,15 +21,9 @@ Route::get('/gate', function () {
     return view('gate');
 })->name('gate.get');
 
-// Route::get('/gate', 'Auth\RegisterController@showRegistrationForm')->name('gate');
 Route::post('/sinup', 'Auth\RegisterController@register')->name('sinup.post');
-//Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login')->name('login.post');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout.get');
-
-
-Route::get('/calendar/{year}-{month}', 'CalendarController@show')->name('calendar');
-
 
 // 認証のいるページ
 Route::group(['middleware' => ['auth']], function () {
@@ -41,8 +35,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/forget/{timeId}/{date}', 'HistoryController@forget')->name('forget');
     Route::get('/user/destroy', 'UserController@destroyPage')->name('destroyUserPage');
     Route::delete('/user/destroy/{id}', 'UserController@destroy')->name('destroyUser');
-
-
-
+    Route::get('/calendar/{year}-{month}', 'CalendarController@show')->name('calendar');
 });
 

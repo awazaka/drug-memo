@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'title')
+@section('title', 'カレンダー')
 
 @section('main')
 <div class="container-fluid bg-light p-3">

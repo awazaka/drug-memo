@@ -1,12 +1,12 @@
 <?php
-$date = '2021-04-11';//date('Y-m-d');
+$date = date('Y-m-d');
 $year = date('Y');
 $month = date('n');
 ?>
 
 @extends('layouts.default')
 
-@section('title', 'title')
+@section('title', 'マイページ')
 
 @section('main')
 <div class="container-fluid bg-light p-3">
